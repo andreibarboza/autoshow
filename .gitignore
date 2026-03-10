@@ -1,0 +1,48 @@
+# Dependências do Node.js
+**/node_modules/
+**/npm-debug.log
+**/yarn-error.log
+
+# Diretórios de Build / Output
+**/dist/
+**/build/
+**/.next/
+**/.output/
+
+# Logs e Arquivos Locais
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Segurança / Segredos
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.key
+**/*.cert
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Caches
+**/.eslintcache
+**/.vite/
+**/.turbo/
+
+# Editor / IDEs (VSCode, IntelliJ)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Uploads locais temporários (se os uploads do Nest/Multer forem para disco na dev)
+**/uploads/
