@@ -18,10 +18,10 @@ export const Header: React.FC<HeaderProps> = ({ onLogout, openCreateModal }) => 
           <LogOut className="w-6 h-6" />
         </button>
         <h1 className="text-lg md:text-xl font-semibold hidden sm:block">Gestão de Veículos</h1>
-        <span className="text-xl font-bold tracking-tight text-white sm:hidden border border-zinc-700 bg-zinc-800/50 px-3 py-1 rounded-xl">Auto<span className="text-blue-500">Admin</span></span>
+        <span className="text-xl font-bold tracking-tight text-white sm:hidden border border-zinc-700 bg-zinc-800/50 px-3 py-1 rounded-xl">Auto<span className="text-brand-yellow">Admin</span></span>
       </div>
       
-      <button onClick={openCreateModal} className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 md:px-5 py-2 md:py-2.5 rounded-xl font-bold transition-colors shadow-lg shadow-blue-500/20 active:scale-95 cursor-pointer">
+      <button onClick={openCreateModal} className="flex items-center gap-2 bg-brand-yellow hover:bg-brand-yellow-hover text-zinc-950 px-4 md:px-5 py-2 md:py-2.5 rounded-xl font-bold transition-colors shadow-lg shadow-brand-yellow/20 active:scale-95 cursor-pointer">
         <Plus className="w-5 h-5 pointer-events-none" />
         <span className="hidden sm:inline">Novo veículo</span>
         <span className="sm:hidden">Novo</span>

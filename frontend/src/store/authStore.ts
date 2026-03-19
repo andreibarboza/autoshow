@@ -19,7 +19,7 @@ export const useAuthStore = create<AuthState>()(
       isAuthenticated: () => !!get().token,
     }),
     {
-      name: 'autoshow-auth-storage',
+      name: 'pititi-auth-storage',
       storage: createJSONStorage(() => sessionStorage),
     }
   )

@@ -27,10 +27,10 @@ export const MobileFilterTrigger: React.FC<MobileFilterTriggerProps> = ({
         onClick={openModal}
         className="flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2.5 rounded-xl font-bold text-slate-200 active:scale-95 transition-transform"
       >
-        <Filter className="w-5 h-5 text-blue-500" />
+        <Filter className="w-5 h-5 text-brand-yellow" />
         Filtros
         {hasFilters && (
-          <span className="bg-blue-600 text-white w-2 h-2 rounded-full absolute top-2 right-2"></span>
+          <span className="bg-brand-red text-white w-2 h-2 rounded-full absolute top-2 right-2"></span>
         )}
       </button>
     </div>

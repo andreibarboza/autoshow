@@ -73,7 +73,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
             <button
               key={i}
               onClick={() => scrollToImage(i)}
-              className={`h-1.5 rounded-full transition-all ${activeImageIndex === i ? 'w-8 bg-blue-500' : 'w-2 bg-zinc-700 hover:bg-zinc-500'}`}
+              className={`h-1.5 rounded-full transition-all ${activeImageIndex === i ? 'w-8 bg-brand-yellow' : 'w-2 bg-zinc-700 hover:bg-zinc-500'}`}
               aria-label={`Ir para a foto ${i + 1}`}
             />
           ))}

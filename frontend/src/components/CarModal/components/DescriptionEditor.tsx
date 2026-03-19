@@ -12,10 +12,10 @@ interface DescriptionEditorProps {
 export const DescriptionEditor: React.FC<DescriptionEditorProps> = ({ value, setValue }) => {
   return (
     <div className="space-y-4 pt-6 border-t border-zinc-800">
-      <h3 className="text-sm font-semibold text-blue-500 uppercase tracking-wider mb-2">Descrição Detalhada</h3>
+      <h3 className="text-sm font-semibold text-brand-yellow uppercase tracking-wider mb-2">Descrição Detalhada</h3>
       <div className="w-full">
         <label className="block text-sm text-zinc-400 mb-2">O que mais os clientes precisam saber sobre este veículo? (Você pode usar Emojis!)</label>
-        <div className="bg-zinc-950 rounded-xl overflow-hidden border border-zinc-800 text-white editor-dark-theme focus-within:border-blue-500 transition-colors">
+        <div className="bg-zinc-950 rounded-xl overflow-hidden border border-zinc-800 text-white editor-dark-theme focus-within:border-brand-yellow transition-colors">
           <style>{`
             .editor-dark-theme .ql-toolbar {
               border: none;

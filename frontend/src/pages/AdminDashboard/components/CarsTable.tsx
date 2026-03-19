@@ -105,7 +105,7 @@ export const CarsTable: React.FC<CarsTableProps> = ({
 
                           <td className="px-2 md:px-6 py-4 text-center">
                             <div className="flex items-center justify-center gap-2">
-                              <button onClick={() => openEditModal(car)} className="p-2 md:p-2.5 bg-zinc-800 hover:bg-blue-600 rounded-lg text-zinc-300 hover:text-white transition-colors cursor-pointer" title="Editar Veículo">
+                              <button onClick={() => openEditModal(car)} className="p-2 md:p-2.5 bg-zinc-800 hover:bg-brand-yellow rounded-lg text-zinc-300 hover:text-zinc-950 transition-colors cursor-pointer" title="Editar Veículo">
                                 <Edit2 className="w-4 h-4 md:w-5 md:h-5 pointer-events-none" />
                               </button>
                               <button onClick={() => handleDelete(car.id)} className="p-2 md:p-2.5 bg-zinc-800 hover:bg-red-600 rounded-lg text-zinc-300 hover:text-white transition-colors cursor-pointer" title="Excluir Definitivamente">

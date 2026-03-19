@@ -23,7 +23,7 @@ export const CarCard: React.FC<CarCardProps> = ({ car, index, isUnavailableAndUn
     >
       <CardWrapper
         {...wrapperProps as any}
-        className={`h-full block bg-zinc-900/80 border border-zinc-800/80 rounded-3xl overflow-hidden hover:border-zinc-700 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300 group ${car.status === 'DISPONIVEL' ? 'cursor-pointer' : 'cursor-default'} backdrop-blur-sm flex flex-col items-start 
+        className={`h-full block bg-zinc-900/80 border border-zinc-800/80 rounded-3xl overflow-hidden hover:border-zinc-700 hover:shadow-2xl hover:shadow-brand-yellow/10 transition-all duration-300 group ${car.status === 'DISPONIVEL' ? 'cursor-pointer' : 'cursor-default'} backdrop-blur-sm flex flex-col items-start 
           ${isUnavailableAndUnfiltered ? 'opacity-50 hover:opacity-100 grayscale-[0.3]' : ''}
         `}
       >
@@ -56,7 +56,7 @@ export const CarCard: React.FC<CarCardProps> = ({ car, index, isUnavailableAndUn
 
       <div className="p-6 w-full grow flex flex-col justify-between items-start">
         <div className="w-full">
-          <h3 className="text-xl font-bold text-slate-100 mb-1 group-hover:text-blue-400 transition-colors line-clamp-1 w-full">
+          <h3 className="text-xl font-bold text-slate-100 mb-1 group-hover:text-brand-yellow transition-colors line-clamp-1 w-full">
             {car.marcaModelo}
           </h3>
           <p className="text-sm text-zinc-400 mb-6 line-clamp-1">{car.resumo}</p>

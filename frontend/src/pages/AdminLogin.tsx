@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Car, Lock, Mail, ArrowRight, Loader2 } from 'lucide-react';
+import { Lock, Mail, ArrowRight, Loader2 } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
 import type { AuthState } from '../store/authStore';
 import api from '../services/api';
@@ -38,10 +38,10 @@ const AdminLogin = () => {
       <div className="w-full max-w-md">
         
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center p-4 bg-blue-600/10 rounded-2xl mb-6 shadow-2xl shadow-blue-500/10 border border-blue-500/20">
-            <Car className="w-10 h-10 text-blue-500" />
+          <div className="inline-flex items-center justify-center p-4 bg-brand-yellow/10 rounded-2xl mb-6 shadow-2xl shadow-brand-yellow/10 border border-brand-yellow/20">
+            <img src="/carro_completo.jpg" alt="Pititi Veículos" className="h-10 object-contain" />
           </div>
-          <h1 className="text-3xl font-bold tracking-tight mb-2">Painel <span className="text-blue-500">Administrativo</span></h1>
+          <h1 className="text-3xl font-bold tracking-tight mb-2">Painel <span className="text-brand-yellow">Administrativo</span></h1>
           <p className="text-zinc-400">Entre com suas credenciais de gestão</p>
         </div>
 
@@ -62,8 +62,8 @@ const AdminLogin = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@autoshow.com"
-                  className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-3.5 pl-12 pr-4 text-slate-100 focus:outline-none focus:border-blue-500/50 transition-colors"
+                  placeholder="admin@pititiveiculos.com"
+                  className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-3.5 pl-12 pr-4 text-slate-100 focus:outline-none focus:border-brand-yellow/50 transition-colors"
                 />
               </div>
             </div>
@@ -78,7 +78,7 @@ const AdminLogin = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-3.5 pl-12 pr-4 text-slate-100 focus:outline-none focus:border-blue-500/50 transition-colors"
+                  className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-3.5 pl-12 pr-4 text-slate-100 focus:outline-none focus:border-brand-yellow/50 transition-colors"
                 />
               </div>
             </div>
@@ -86,7 +86,7 @@ const AdminLogin = () => {
             <button 
               type="submit" 
               disabled={isLoading}
-              className="w-full mt-8 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:hover:bg-blue-600 text-white font-semibold rounded-xl py-4 transition-all flex items-center justify-center gap-2 active:scale-95 shadow-lg shadow-blue-500/20"
+              className="w-full mt-8 bg-brand-yellow hover:bg-brand-yellow-hover disabled:opacity-50 disabled:hover:bg-brand-yellow text-zinc-950 font-bold rounded-xl py-4 transition-all flex items-center justify-center gap-2 active:scale-95 shadow-lg shadow-brand-yellow/20"
             >
               {isLoading ? (
                 <>
@@ -104,7 +104,7 @@ const AdminLogin = () => {
         </div>
 
         <p className="text-center text-zinc-600 text-sm mt-8">
-          &copy; {new Date().getFullYear()} AutoShow. Acesso restrito.
+          &copy; {new Date().getFullYear()} Pititi Veículos. Acesso restrito.
         </p>
       </div>
 

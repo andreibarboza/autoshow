@@ -36,7 +36,7 @@ export const MobileFilterModal: React.FC<MobileFilterModalProps> = ({
       <FilterSidebar filters={filters} setFilters={setFilters} onClear={clearFilters} />
       
       <div className="md:hidden mt-8 mb-4 px-2">
-        <button onClick={() => setIsOpen(false)} className="w-full bg-blue-600 font-bold py-4 rounded-xl text-white">
+        <button onClick={() => setIsOpen(false)} className="w-full bg-brand-yellow font-bold py-4 rounded-xl text-zinc-950">
           Ver Resultados ({resultCount})
         </button>
       </div>

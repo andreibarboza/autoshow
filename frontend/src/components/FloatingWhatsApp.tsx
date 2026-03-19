@@ -5,7 +5,7 @@ interface FloatingActionWhatsAppProps {
   message?: string;
 }
 
-const FloatingActionWhatsApp = ({ phoneNumber, message = "Olá! Gostaria de ajuda para encontrar meu carro ideal na AutoShow." }: FloatingActionWhatsAppProps) => {
+const FloatingActionWhatsApp = ({ phoneNumber, message = "Olá! Gostaria de ajuda para encontrar meu carro ideal na Pititi Veículos." }: FloatingActionWhatsAppProps) => {
   
   const handleWhatsAppClick = () => {
     const encodedMessage = encodeURIComponent(message);

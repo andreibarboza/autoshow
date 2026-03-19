@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({ onClose, isPending, isEditing })
         type="submit" 
         form="car-form" 
         disabled={isPending}
-        className="bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white px-8 py-2.5 rounded-xl font-bold transition-colors flex items-center gap-2 cursor-pointer"
+        className="bg-brand-yellow hover:bg-brand-yellow-hover disabled:opacity-50 text-zinc-950 px-8 py-2.5 rounded-xl font-bold transition-colors flex items-center gap-2 cursor-pointer"
       >
         {isPending && <Loader2 className="w-4 h-4 animate-spin" />}
         {isEditing ? 'Salvar edição' : 'Publicar veículo'}

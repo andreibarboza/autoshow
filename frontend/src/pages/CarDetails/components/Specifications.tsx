@@ -10,7 +10,7 @@ export const Specifications: React.FC<SpecificationsProps> = ({ car }) => {
   return (
     <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 md:p-8 shadow-xl">
       <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-        <CheckCircle2 className="w-5 h-5 text-blue-500" /> Ficha Técnica Completa
+        <CheckCircle2 className="w-5 h-5 text-brand-yellow" /> Ficha Técnica Completa
       </h3>
 
       <div className="grid grid-cols-2 gap-y-6 gap-x-4">

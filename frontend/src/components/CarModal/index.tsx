@@ -186,7 +186,7 @@ const CarModal: React.FC<CarModalProps> = ({ isOpen, onClose, carToEdit }) => {
         <div className="flex-1 overflow-y-auto p-6 relative">
           {isFetching && (
             <div className="absolute inset-0 bg-zinc-900/50 backdrop-blur-[2px] z-10 flex items-center justify-center rounded-b-3xl">
-               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-yellow"></div>
             </div>
           )}
           <form id="car-form" onSubmit={handleSubmit(onSubmit)} className="space-y-6">

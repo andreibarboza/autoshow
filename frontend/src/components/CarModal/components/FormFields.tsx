@@ -12,51 +12,51 @@ export const FormFields: React.FC<FormFieldsProps> = ({ register, errors }) => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-blue-500 uppercase tracking-wider mb-2">Informações Principais</h3>
+        <h3 className="text-sm font-semibold text-brand-yellow uppercase tracking-wider mb-2">Informações Principais</h3>
         
         <div>
           <label className="block text-sm text-zinc-400 mb-1">Marca / Modelo</label>
-          <input {...register('marcaModelo')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none" placeholder="Ex: BMW 320i M Sport" />
+          <input {...register('marcaModelo')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none" placeholder="Ex: BMW 320i M Sport" />
           {errors.marcaModelo && <span className="text-xs text-red-500">{errors.marcaModelo.message}</span>}
         </div>
 
         <div>
           <label className="block text-sm text-zinc-400 mb-1">Resumo Curto</label>
-          <input {...register('resumo')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none" placeholder="Ex: 2.0 Turbo Automático" />
+          <input {...register('resumo')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none" placeholder="Ex: 2.0 Turbo Automático" />
           {errors.resumo && <span className="text-xs text-red-500">{errors.resumo.message}</span>}
         </div>
 
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Ano Fab.</label>
-            <input type="number" {...register('anoFabricacao', { valueAsNumber: true })} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none" />
+            <input type="number" {...register('anoFabricacao', { valueAsNumber: true })} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none" />
           </div>
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Ano Mod.</label>
-            <input type="number" {...register('anoModelo', { valueAsNumber: true })} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none" />
+            <input type="number" {...register('anoModelo', { valueAsNumber: true })} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none" />
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Preço (R$)</label>
-            <input type="number" step="0.01" {...register('preco', { valueAsNumber: true })} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white text-lg font-bold text-green-500 focus:border-blue-500 outline-none" />
+            <input type="number" step="0.01" {...register('preco', { valueAsNumber: true })} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white text-lg font-bold text-green-500 focus:border-brand-yellow outline-none" />
             {errors.preco && <span className="text-xs text-red-500">{errors.preco.message}</span>}
           </div>
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Quilometragem</label>
-            <input type="number" {...register('km', { valueAsNumber: true })} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none" />
+            <input type="number" {...register('km', { valueAsNumber: true })} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none" />
           </div>
         </div>
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-sm font-semibold text-blue-500 uppercase tracking-wider mb-2">Ficha Técnica</h3>
+        <h3 className="text-sm font-semibold text-brand-yellow uppercase tracking-wider mb-2">Ficha Técnica</h3>
         
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Câmbio</label>
-            <select {...register('cambio')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none appearance-none cursor-pointer">
+            <select {...register('cambio')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none appearance-none cursor-pointer">
               <option value="Automático">Automático</option>
               <option value="Manual">Manual</option>
               <option value="Automatizado">Automatizado</option>
@@ -65,7 +65,7 @@ export const FormFields: React.FC<FormFieldsProps> = ({ register, errors }) => {
           </div>
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Combustível</label>
-            <select {...register('combustivel')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none appearance-none cursor-pointer">
+            <select {...register('combustivel')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none appearance-none cursor-pointer">
               <option value="Flex">Flex</option>
               <option value="Gasolina">Gasolina</option>
               <option value="Etanol">Etanol</option>
@@ -77,7 +77,7 @@ export const FormFields: React.FC<FormFieldsProps> = ({ register, errors }) => {
           </div>
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Carroceria</label>
-            <select {...register('carroceria')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none appearance-none cursor-pointer">
+            <select {...register('carroceria')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none appearance-none cursor-pointer">
               <option value="Hatch">Hatch</option>
               <option value="Sedan">Sedan</option>
               <option value="SUV">SUV</option>
@@ -91,7 +91,7 @@ export const FormFields: React.FC<FormFieldsProps> = ({ register, errors }) => {
           </div>
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Cor predominante</label>
-            <select {...register('cor')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none appearance-none cursor-pointer">
+            <select {...register('cor')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none appearance-none cursor-pointer">
               <option value="Branco">Branco</option>
               <option value="Preto">Preto</option>
               <option value="Prata">Prata</option>
@@ -109,7 +109,7 @@ export const FormFields: React.FC<FormFieldsProps> = ({ register, errors }) => {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Disponibilidade (Status)</label>
-            <select {...register('status')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none font-semibold appearance-none cursor-pointer">
+            <select {...register('status')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none font-semibold appearance-none cursor-pointer">
               <option value="DISPONIVEL" className="text-green-500">✅ DISPONÍVEL</option>
               <option value="VENDIDO" className="text-red-500">❌ VENDIDO</option>
               <option value="RESERVADO" className="text-yellow-500">⏳ RESERVADO</option>
@@ -118,7 +118,7 @@ export const FormFields: React.FC<FormFieldsProps> = ({ register, errors }) => {
           </div>
           <div>
             <label className="block text-sm text-zinc-400 mb-1">Tipo de Veículo</label>
-            <select {...register('tipo')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none font-semibold appearance-none cursor-pointer">
+            <select {...register('tipo')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none font-semibold appearance-none cursor-pointer">
               <option value="CARRO">🚗 Carro</option>
               <option value="MOTO">🏍️ Moto</option>
             </select>
@@ -127,7 +127,7 @@ export const FormFields: React.FC<FormFieldsProps> = ({ register, errors }) => {
 
         <div>
            <label className="block text-sm text-zinc-400 mb-1">Placa (Opcional - será ocultada se vazia)</label>
-           <input {...register('placa')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-blue-500 outline-none" placeholder="Ex: ABC-1234" />
+           <input {...register('placa')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none" placeholder="Ex: ABC-1234" />
         </div>
       </div>
     </div>

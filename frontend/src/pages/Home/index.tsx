@@ -9,6 +9,7 @@ import type { FilterState } from '../../types';
 import { MobileFilterModal } from './components/MobileFilterModal';
 import { MobileFilterTrigger } from './components/MobileFilterTrigger';
 import { CarCard } from './components/CarCard';
+import Footer from '../../components/Footer';
 
 export const fetchCars = async (): Promise<Car[]> => {
   const { data } = await api.get('/cars');
@@ -45,7 +46,7 @@ const Home = () => {
     if (!data) return [];
 
     return data.filter(car => {
-     
+
       if (car.status === 'OCULTO') return false;
 
       if (filters.hasFilters && car.status !== 'DISPONIVEL') {
@@ -77,17 +78,17 @@ const Home = () => {
       <Navbar />
 
       <main className="pt-32 pb-10 container mx-auto px-4">
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight">
-            Descubra o Seu <span className="bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent">Próximo Carro</span>
+            Descubra o seu <span className="bg-gradient-to-r from-brand-yellow to-brand-red bg-clip-text text-transparent">Próximo Veículo</span>
           </h1>
-          <p className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto">
-            A AutoShow traz para você uma seleção exclusiva de veículos testados, aprovados e prontos para a estrada visando a melhor experiência premium.
+          <p className="text-zinc-400 text-lg md:text-xl max-w-3xl mx-auto">
+            A Pititi Veículos traz para você uma seleção exclusiva de veículos testados, aprovados e prontos para a estrada visando a melhor experiência premium.
           </p>
         </motion.div>
 
@@ -110,14 +111,14 @@ const Home = () => {
 
           <div className="flex-1 w-full relative z-10">
             <h2 className="text-2xl font-semibold mb-8 flex items-center gap-3">
-              <CarIcon className="text-blue-500 w-6 h-6" />
+              <CarIcon className="text-brand-yellow w-6 h-6" />
               <span className="text-sm font-normal text-zinc-500 ml-auto">
                 {filteredCars?.length === 1 ? '1 encontrado' : `${filteredCars?.length || 0} encontrados`}
               </span>
             </h2>
 
             {isLoading && (
-              <div className="flex flex-col items-center justify-center py-20 text-blue-500">
+              <div className="flex flex-col items-center justify-center py-20 text-brand-yellow">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-current mb-4"></div>
                 <p className="text-zinc-400 font-medium">Carregando o catálogo premium...</p>
               </div>
@@ -155,6 +156,7 @@ const Home = () => {
         </div>
       </main>
 
+      <Footer />
     </div>
   );
 };

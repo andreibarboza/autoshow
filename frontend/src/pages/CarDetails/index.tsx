@@ -28,7 +28,7 @@ const CarDetails = () => {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-zinc-950 text-slate-100 flex flex-col items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mb-4"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-yellow mb-4"></div>
         <p className="text-zinc-400 font-medium">Buscando veículo...</p>
       </div>
     );
@@ -40,7 +40,7 @@ const CarDetails = () => {
         <CarIcon className="w-16 h-16 text-zinc-700 mb-6" />
         <h2 className="text-2xl font-semibold mb-2">Veículo não encontrado</h2>
         <p className="text-zinc-500 mb-8 max-w-md">Este veículo pode ter sido excluído do nosso catálogo ou o link está quebrado.</p>
-        <Link to="/" className="text-blue-500 hover:text-blue-400 font-medium flex items-center gap-2">
+        <Link to="/" className="text-brand-yellow hover:text-brand-yellow-hover font-medium flex items-center gap-2">
           <ArrowLeft className="w-4 h-4" /> Voltar para a vitrine
         </Link>
       </div>
@@ -117,7 +117,7 @@ const CarDetails = () => {
             </button>
           ) : (
             <a
-              href={`https://wa.me/5511999999999?text=${encodeURIComponent(`Olá, me interessei pelo ${car.marcaModelo}`)}`}
+              href={`https://wa.me/5535992018997?text=${encodeURIComponent(`Olá, me interessei pelo ${car.marcaModelo}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full relative overflow-hidden group bg-green-600 hover:bg-green-500 text-white font-bold text-base h-[40px] rounded-xl transition-all shadow-lg shadow-green-600/20 active:scale-95 cursor-pointer flex items-center justify-center gap-2 hover:shadow-green-600/40"

@@ -14,15 +14,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ userEmail, onLogout }) => {
     <aside className="w-64 bg-zinc-900 border-r border-zinc-800 flex-col hidden md:flex sticky top-0 h-screen">
       <div className="h-20 flex items-center px-6 border-b border-zinc-800">
         <div className="flex items-center gap-3 group cursor-pointer" onClick={() => navigate('/')}>
-          <div className="bg-blue-600 p-2 rounded-lg group-hover:bg-blue-500 transition-colors">
-            <Car className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xl font-bold tracking-tight text-white">Auto<span className="text-blue-500">Admin</span></span>
+          <img src="/carro_completo.jpg" alt="Pititi Veículos" className="h-10 object-contain" />
         </div>
       </div>
 
       <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-        <button className="w-full flex items-center gap-3 px-4 py-3 bg-blue-600/10 text-blue-500 font-medium rounded-xl border border-blue-500/20">
+        <button className="w-full flex items-center gap-3 px-4 py-3 bg-brand-yellow/10 text-brand-yellow font-medium rounded-xl border border-brand-yellow/20">
           <Car className="w-5 h-5" />
           Catálogo
         </button>

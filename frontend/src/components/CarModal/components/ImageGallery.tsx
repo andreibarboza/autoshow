@@ -23,7 +23,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 }) => {
   return (
     <div className="mt-8 pt-6 border-t border-zinc-800">
-      <h3 className="text-sm font-semibold text-blue-500 uppercase tracking-wider mb-4">Galeria do Veículo</h3>
+      <h3 className="text-sm font-semibold text-brand-yellow uppercase tracking-wider mb-4">Galeria do Veículo</h3>
 
       {existingPhotos.length > 0 && (
         <div className="mb-6">
@@ -51,9 +51,9 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         </div>
       )}
 
-      <label className="border-2 border-dashed border-zinc-700 hover:border-blue-500 bg-zinc-950/50 hover:bg-zinc-900/80 transition-colors rounded-2xl p-8 flex flex-col items-center justify-center cursor-pointer group">
-        <div className="bg-zinc-900 p-4 rounded-full group-hover:bg-blue-600/20 mb-3 transition-colors">
-          <UploadCloud className="w-8 h-8 text-zinc-500 group-hover:text-blue-500" />
+      <label className="border-2 border-dashed border-zinc-700 hover:border-brand-yellow bg-zinc-950/50 hover:bg-zinc-900/80 transition-colors rounded-2xl p-8 flex flex-col items-center justify-center cursor-pointer group">
+        <div className="bg-zinc-900 p-4 rounded-full group-hover:bg-brand-yellow/20 mb-3 transition-colors">
+          <UploadCloud className="w-8 h-8 text-zinc-500 group-hover:text-brand-yellow" />
         </div>
         <p className="font-medium text-zinc-300">Clique para anexar novas imagens</p>
         <p className="text-xs text-zinc-500 mt-1">PNG, JPG, WEBP (Max 5MB un.)</p>
@@ -61,8 +61,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       </label>
 
       {newFiles.length > 0 && (
-        <div className="mt-4 border border-blue-900/30 bg-blue-950/10 p-4 rounded-2xl">
-          <p className="text-xs text-blue-400 mb-3 font-medium">Novas imagens prontas para upload no salvamento:</p>
+        <div className="mt-4 border border-brand-yellow/30 bg-brand-yellow/10 p-4 rounded-2xl">
+          <p className="text-xs text-brand-yellow mb-3 font-medium">Novas imagens prontas para upload no salvamento:</p>
           <div className="flex gap-4 overflow-x-auto pb-2 items-center">
             {newFiles.map((f) => {
               const isMain = mainPhotoVal === f.id;

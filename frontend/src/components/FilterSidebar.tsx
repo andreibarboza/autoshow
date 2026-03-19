@@ -47,7 +47,7 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
               onChange={handleChange}
               type="text" 
               placeholder="Marca, modelo..." 
-              className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 pl-9 pr-3 text-slate-200 focus:outline-none focus:border-blue-500/50 transition-colors text-sm"
+              className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 pl-9 pr-3 text-slate-200 focus:outline-none focus:border-brand-yellow/50 transition-colors text-sm"
             />
           </div>
         </div>
@@ -80,7 +80,7 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
               onChange={handleChange}
               type="number" 
               placeholder="Mín" 
-              className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-blue-500/50 transition-colors text-sm"
+              className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-brand-yellow/50 transition-colors text-sm"
             />
             <input 
               name="maxPrice"
@@ -88,7 +88,7 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
               onChange={handleChange}
               type="number" 
               placeholder="Máx" 
-              className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-blue-500/50 transition-colors text-sm"
+              className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-brand-yellow/50 transition-colors text-sm"
             />
           </div>
         </div>
@@ -102,7 +102,7 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
               onChange={handleChange}
               type="number" 
               placeholder="Ex: 2015" 
-              className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-blue-500/50 transition-colors text-sm"
+              className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-brand-yellow/50 transition-colors text-sm"
             />
           </div>
         </div>
@@ -113,7 +113,7 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
             name="color"
             value={filters.color}
             onChange={handleChange}
-            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-blue-500/50 transition-colors text-sm appearance-none"
+            className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-brand-yellow/50 transition-colors text-sm appearance-none"
           >
             <option value="">Todas as cores</option>
             <option value="Branco">Branco</option>
