@@ -63,8 +63,9 @@ export class CarsService {
     }
   }
 
-  async findAll() {
+  async findAll(fetchAll: boolean = false) {
     return this.prisma.car.findMany({
+      where: fetchAll ? undefined : { status: { not: 'OCULTO' } },
       include: {
         fotos: {
           where: { isMain: true },

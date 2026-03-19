@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Patch, Delete, Body, Param, UseInterceptors, UploadedFiles, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Patch, Delete, Body, Param, UseInterceptors, UploadedFiles, UseGuards, Query } from '@nestjs/common';
 import { CarsService } from './cars.service';
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { AuthGuard } from '@nestjs/passport';
@@ -15,8 +15,9 @@ export class CarsController {
   }
 
   @Get()
-  findAll() {
-    return this.carsService.findAll();
+  findAll(@Query('all') all?: string) {
+    const fetchAll = all === 'true';
+    return this.carsService.findAll(fetchAll);
   }
 
   @Get(':id')

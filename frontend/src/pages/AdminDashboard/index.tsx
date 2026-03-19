@@ -27,7 +27,7 @@ const AdminDashboard = () => {
   const { data: cars, isLoading } = useQuery<CarType[]>({
     queryKey: ['cars'],
     queryFn: async () => {
-      const { data } = await api.get('/cars');
+      const { data } = await api.get('/cars?all=true');
       return data;
     }
   });
