@@ -5,6 +5,7 @@ import type { Car } from '../../types';
 import Navbar from '../../components/Navbar';
 import { ArrowLeft, Car as CarIcon } from 'lucide-react';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ImageCarousel } from './components/ImageCarousel';
 import { CarHeader } from './components/CarHeader';
 import { Specifications } from './components/Specifications';
@@ -73,6 +74,15 @@ const CarDetails = () => {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-slate-100 font-sans pb-20 overflow-x-hidden">
+      <Helmet>
+        <title>{car.marcaModelo} - Pititi Veículos</title>
+        <meta name="description" content={`Confira este ${car.marcaModelo} ${car.anoFabricacao}. ${car.resumo}`} />
+        <meta property="og:title" content={`${car.marcaModelo} - Pititi Veículos`} />
+        <meta property="og:description" content={`${car.marcaModelo} ${car.anoFabricacao}. ${car.resumo}`} />
+        <meta property="og:image" content={sortedPhotos[0]?.url || '/icone-rodape.png'} />
+        <meta property="og:type" content="product" />
+      </Helmet>
+
       <Navbar />
 
       <main className="container mx-auto px-4 pt-24 md:pt-32 max-w-6xl">

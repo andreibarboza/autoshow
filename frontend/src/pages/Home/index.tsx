@@ -4,6 +4,7 @@ import api from '../../services/api';
 import type { Car } from '../../types';
 import { Car as CarIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../../components/Navbar';
 import type { FilterState } from '../../types';
 import { MobileFilterModal } from './components/MobileFilterModal';
@@ -75,6 +76,15 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-slate-100 font-sans">
+      <Helmet>
+        <title>Pititi Veículos | Seminovos Premium</title>
+        <meta name="description" content="A Pititi Veículos traz para você uma seleção exclusiva de veículos testados, aprovados e prontos para a estrada visando a melhor experiência premium." />
+        <meta property="og:title" content="Pititi Veículos | Seminovos Premium" />
+        <meta property="og:description" content="Confira nossa seleção de veículos com qualidade comprovada." />
+        <meta property="og:image" content="/icone_carro.jpg" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+      
       <Navbar />
 
       <main className="pt-32 pb-10 container mx-auto px-4">
