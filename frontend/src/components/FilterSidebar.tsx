@@ -21,8 +21,8 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
 
   return (
     <aside className="w-full md:w-72 bg-zinc-900 border border-zinc-800 rounded-2xl rounded-r-none p-6 h-fit sticky top-28 shadow-xl">
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-bold flex items-center gap-2">
+      <div className="flex items-center justify-end md:justify-between mb-6">
+        <h3 className="text-xl font-bold hidden md:flex items-center gap-2">
           Filtros
         </h3>
         {filters.hasFilters && (
@@ -54,8 +54,8 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
 
         <div className="pb-6 border-b border-zinc-800/60">
           <label className="block text-sm font-medium text-zinc-400 mb-2">Tipo de Veículo</label>
-          <div className="grid grid-cols-3 gap-2 bg-zinc-950 p-1.5 rounded-xl border border-zinc-800">
-            {['TODOS', 'CARRO', 'MOTO'].map((t) => (
+          <div className="grid grid-cols-2 gap-2 bg-zinc-950 p-1.5 rounded-xl border border-zinc-800">
+            {['TODOS', 'CARRO', 'MOTO', 'OUTROS'].map((t) => (
               <button
                 key={t}
                 onClick={() => setFilters(prev => ({ ...prev, tipo: t === 'TODOS' ? '' : t, hasFilters: true }))}
@@ -65,7 +65,7 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
                     : 'text-zinc-500 hover:text-zinc-300 hover:bg-zinc-900'
                 }`}
               >
-                {t === 'TODOS' ? 'Todos' : t === 'CARRO' ? 'Carros' : 'Motos'}
+                {t === 'TODOS' ? 'Todos' : t === 'CARRO' ? 'Carros' : t === 'MOTO' ? 'Motos' : 'Outros'}
               </button>
             ))}
           </div>
@@ -79,6 +79,7 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
               value={filters.minPrice}
               onChange={handleChange}
               type="number" 
+              min="0"
               placeholder="Mín" 
               className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-brand-yellow/50 transition-colors text-sm"
             />
@@ -87,6 +88,7 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
               value={filters.maxPrice}
               onChange={handleChange}
               type="number" 
+              min="0"
               placeholder="Máx" 
               className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-brand-yellow/50 transition-colors text-sm"
             />
@@ -101,6 +103,7 @@ const FilterSidebar = ({ filters, setFilters, onClear }: FilterSidebarProps) => 
               value={filters.minYear}
               onChange={handleChange}
               type="number" 
+              min="0"
               placeholder="Ex: 2015" 
               className="w-full bg-zinc-950 border border-zinc-800 rounded-lg py-2.5 px-3 text-slate-200 focus:outline-none focus:border-brand-yellow/50 transition-colors text-sm"
             />

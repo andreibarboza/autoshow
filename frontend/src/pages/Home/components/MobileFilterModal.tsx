@@ -23,7 +23,7 @@ export const MobileFilterModal: React.FC<MobileFilterModalProps> = ({
   return (
     <div className={`
       fixed inset-0 z-50 bg-zinc-950/95 backdrop-blur-xl p-4 overflow-y-auto flex-col h-screen
-      md:sticky md:top-32 md:h-[calc(100vh-8rem)] md:bg-transparent md:backdrop-blur-none md:p-0 md:flex md:w-auto md:shrink-0 md:self-start
+      md:sticky md:top-32 md:h-fit md:bg-transparent md:backdrop-blur-none md:p-0 md:flex md:w-auto md:shrink-0 md:self-start
       [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-zinc-900/50 [&::-webkit-scrollbar-thumb]:bg-zinc-700 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-zinc-600
       ${isOpen ? 'flex' : 'hidden'}
     `}>

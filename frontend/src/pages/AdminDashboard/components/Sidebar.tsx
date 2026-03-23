@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Car, LogOut, Settings } from 'lucide-react';
+import { Car, LogOut } from 'lucide-react';
 
 interface SidebarProps {
   userEmail: string | null;
@@ -22,10 +22,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ userEmail, onLogout }) => {
         <button className="w-full flex items-center gap-3 px-4 py-3 bg-brand-yellow/10 text-brand-yellow font-medium rounded-xl border border-brand-yellow/20">
           <Car className="w-5 h-5" />
           Catálogo
-        </button>
-        <button disabled className="w-full flex items-center gap-3 px-4 py-3 text-zinc-500 font-medium rounded-xl opacity-50 cursor-not-allowed">
-          <Settings className="w-5 h-5" />
-          Configurações
         </button>
       </nav>
 

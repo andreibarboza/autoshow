@@ -41,7 +41,7 @@ export const carSchema = z.object({
   cor: z.string().min(2, 'Cor obrigatória'),
   preco: z.number().min(1, 'Preço deve ser maior que 0'),
   status: z.enum(['DISPONIVEL', 'VENDIDO', 'RESERVADO', 'OCULTO']),
-  tipo: z.enum(['CARRO', 'MOTO']),
+  tipo: z.enum(['CARRO', 'MOTO', 'OUTROS']),
   placa: z.string().nullable().optional(),
   descricao: z.string().optional(),
 });

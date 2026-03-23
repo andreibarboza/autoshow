@@ -75,9 +75,9 @@ const CarDetails = () => {
   return (
     <div className="min-h-screen bg-zinc-950 text-slate-100 font-sans pb-20 overflow-x-hidden">
       <Helmet>
-        <title>{car.marcaModelo} - Pititi Veículos</title>
+        <title>{car.marcaModelo}</title>
         <meta name="description" content={`Confira este ${car.marcaModelo} ${car.anoFabricacao}. ${car.resumo}`} />
-        <meta property="og:title" content={`${car.marcaModelo} - Pititi Veículos`} />
+        <meta property="og:title" content={car.marcaModelo} />
         <meta property="og:description" content={`${car.marcaModelo} ${car.anoFabricacao}. ${car.resumo}`} />
         <meta property="og:image" content={sortedPhotos[0]?.url || '/icone-rodape.png'} />
         <meta property="og:type" content="product" />

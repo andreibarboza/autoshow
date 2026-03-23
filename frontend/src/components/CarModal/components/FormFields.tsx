@@ -121,6 +121,7 @@ export const FormFields: React.FC<FormFieldsProps> = ({ register, errors }) => {
             <select {...register('tipo')} className="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-2.5 px-4 text-white focus:border-brand-yellow outline-none font-semibold appearance-none cursor-pointer">
               <option value="CARRO">🚗 Carro</option>
               <option value="MOTO">🏍️ Moto</option>
+              <option value="OUTROS">🛸 Outros</option>
             </select>
           </div>
         </div>
